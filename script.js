@@ -85,4 +85,8 @@ const dots=[...document.querySelectorAll('.side-nav b')],sections=[...document.q
 const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){const index=sections.indexOf(entry.target);dots.forEach((dot,i)=>dot.classList.toggle('active',i===index))}}),{root:pages,threshold:.6});
 sections.forEach(section=>observer.observe(section));
 dots.forEach((dot,index)=>dot.onclick=()=>sections[index].scrollIntoView({behavior:'smooth'}));
+
+/* Restore the original "قرار ما" background supplied with the invitation. */
+const detailsPhoto=document.querySelector('.details-photo');
+if(detailsPhoto) detailsPhoto.style.backgroundImage='url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAA4KCw0LCQ4NDA0QDw==")';
 })();
