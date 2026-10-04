@@ -1,1 +1,6 @@
 .details-photo{background-image:url('assets/details-photo.jpg?v=final2') !important;background-repeat:no-repeat;background-size:cover;background-position:center;}
+
+/* Opening card: make the tap action obvious */
+.seal:before{content:'ضربه بزنید';position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:112px;height:112px;border-radius:50%;display:flex;align-items:center;justify-content:center;border:1.5px solid rgba(255,255,255,.95);background:rgba(255,255,255,.14);box-shadow:0 0 0 0 rgba(255,255,255,.55),0 8px 28px rgba(70,40,50,.16);backdrop-filter:blur(3px);color:#fff;font:500 13px Tahoma,sans-serif;text-shadow:0 1px 7px rgba(60,35,45,.45);animation:tapPulse 1.8s ease-in-out infinite;}
+.seal-breaking .seal:before{animation:none;opacity:0;transition:opacity .2s;}
+@keyframes tapPulse{0%,100%{transform:translate(-50%,-50%) scale(1);box-shadow:0 0 0 0 rgba(255,255,255,.55),0 8px 28px rgba(70,40,50,.16)}50%{transform:translate(-50%,-50%) scale(1.06);box-shadow:0 0 0 12px rgba(255,255,255,0),0 10px 32px rgba(70,40,50,.2)}}
